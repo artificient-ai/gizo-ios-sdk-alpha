@@ -15,30 +15,29 @@ let package = Package(
     dependencies: [
         .package(name: "MapboxMaps", url: "https://github.com/mapbox/mapbox-maps-ios.git", .exact("10.12.3")),
         .package(name: "MapboxNavigation", url: "https://github.com/mapbox/mapbox-navigation-ios.git", .exact("2.12.0")),
-        .package(name: "Python-iOS", url: "https://github.com/kewlbear/Python-iOS.git", from: "0.1.1-b"),
+        .package(name: "Python-iOS", url: "https://github.com/kewlbear/Python-iOS.git", .exact("0.1.1-b20230423-090254")),
         .package(name: "NumPy-iOS", url: "https://github.com/kewlbear/NumPy-iOS.git", .branch("main")),
     ],
     targets: [
         .binaryTarget(
-            name: "GizoSDK",
-            url: "https://zangmi.art/upload/GizoSDK.xcframework.zip",
-            checksum: "8bc9e57a997a8c6d4c1bcdcfb4346f9cc63697f163f537deb6c5314e1aaabf0d"
+            name: "opencv2",
+            url: "https://zangmi.art/upload/opencv2.xcframework.zip",
+            checksum: "d68b4094780451e04db624480ad2f53ec7c825b843984eb515370be18a592fe5"
         ),
         .binaryTarget(
-            name: "OpenCV",
-            url: "https://github.com/opencv/opencv/releases/download/4.8.1/opencv-4.8.1-ios-framework.zip",
-            checksum: "0689312a9de439757618a412b266dc5ee75d2e32aefa9eac32c3f808ade06331"
+            name: "GizoSDK",
+            url: "https://zangmi.art/upload/GizoSDK.xcframework.zip",
+            checksum: "566cfc76682837fe5bfb8867fcb6a8a5e63b9b4662c979b5e36abaaa411cae6d"
         ),
         .target(
             name: "GizoSDK-iOS",
-            dependencies: ["MapboxMaps", "MapboxNavigation", "Python-iOS", "NumPy-iOS", "OpenCV", "GizoSDK"],
-            path: "Sources",
+            dependencies: ["MapboxMaps", "MapboxNavigation", "Python-iOS", "NumPy-iOS", "opencv2", "GizoSDK"],
             resources: [.copy("Gizo.bundle")],
             linkerSettings: [
                 .linkedLibrary("z"),
                 .linkedLibrary("bz2"),
                 .linkedLibrary("sqlite3"),
-                .linkedFramework("CoreML")
+                .linkedFramework("CoreML"),
                 .linkedFramework("SystemConfiguration")
             ]
         )
