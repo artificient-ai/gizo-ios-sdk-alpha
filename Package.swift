@@ -26,8 +26,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "GizoSDK",
-            url: "https://zangmi.art/upload/GizoSDK.xcframework.zip",
-            checksum: "6015d2df7c00e0ad29b640fc5749a661d98ce02ff0d7b13beb5afd91a2809bd9"
+            url: "https://zangmi.art/upload/v2/GizoSDK.xcframework.zip",
+            checksum: "91c8ee231d8648f011a36360696013ce374495dc55bc5699c9b1383ce4358140"
         ),
         .target(
             name: "GizoSDK-iOS",
