@@ -17,3 +17,6 @@ The following permissions are required by the iOS SDK:
 * NSCameraUsageDescription
 
 ![imagealt](https://github.com/artificient-ai/gizo-ios-sdk-alpha/blob/main/Doc/img003.png "图片")
+
+- Add 'license.json' and 'publickey.pem' to Xcode project
+![imagealt](https://github.com/artificient-ai/gizo-ios-sdk-alpha/blob/main/Doc/img003.png "图片")
