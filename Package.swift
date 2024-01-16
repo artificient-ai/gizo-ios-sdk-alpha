@@ -21,12 +21,12 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "opencv2",
-            url: "https://zangmi.art/upload/opencv2.xcframework.zip",
+            url: "https://iosapi.artificient.de/config/opencv2.xcframework.zip",
             checksum: "d68b4094780451e04db624480ad2f53ec7c825b843984eb515370be18a592fe5"
         ),
         .binaryTarget(
             name: "GizoSDK",
-            url: "https://drive.google.com/file/d/1DwPUSfn4aoRtxh5GbNoB7itigX1PHgQP/view?usp=sharing",
+            url: "https://iosapi.artificient.de/config/GizoSDK.xcframework.zip",
             checksum: "e0c265d1ecb81b073b7ae124689bbcc9f0ee49a95ca476f2f4282bd5192fe0ce"
         ),
         .target(
