@@ -5,7 +5,7 @@ import PackageDescription
 
 let version = "1.0.0"
 let moduleName = "GizoSDK"
-let checksum = "3ac7be64618b96f2c08f50cdabb44aabfa7bd27149aeccc0f3fdb9003d8e7c13"
+let checksum = "d485cd8ba1b048456563fb5b73d4e50fda459c8c527493868a9635e1121454df"
 
 let package = Package(
     name: "GizoSDK-iOS",
