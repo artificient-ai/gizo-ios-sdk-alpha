@@ -26,6 +26,7 @@ cat Package.swift
 echo "git commit all without framework and push"
 git add Package.swift
 git commit -m "New $FRAMEWORK_NAME version $NEW_VERSION"
+git tag -a $NEW_VERSION -m "Version $NEW_VERSION"
 git push
 
 echo "Releasing the new version"
