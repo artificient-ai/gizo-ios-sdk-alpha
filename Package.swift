@@ -24,18 +24,13 @@ let package = Package(
     ],
     targets: [
         .binaryTarget(
-            name: "opencv2",
-            url: "https://artificient-ai.s3.eu-central-1.amazonaws.com/opencv2.xcframework.zip",
-            checksum: "d68b4094780451e04db624480ad2f53ec7c825b843984eb515370be18a592fe5"
-        ),
-        .binaryTarget(
             name: moduleName,
             url: "https://github.com/artificient-ai/gizo-ios-sdk-alpha/releases/download/\(version)/\(moduleName).xcframework.zip",
             checksum: checksum
         ),
         .target(
             name: "GizoSDK-iOS",
-            dependencies: ["MapboxMaps", "MapboxNavigation", "Python-iOS", "NumPy-iOS", "opencv2", "GizoSDK"],
+            dependencies: ["MapboxMaps", "MapboxNavigation", "Python-iOS", "NumPy-iOS", "GizoSDK"],
             resources: [.copy("Gizo.bundle")],
             linkerSettings: [
                 .linkedLibrary("z"),
